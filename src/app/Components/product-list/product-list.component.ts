@@ -18,7 +18,6 @@ export class ProductListComponent implements OnInit {
   ngOnInit(): void {
     this.posts.getproductList().then(res => {
       this.pdpList = res.recipes;
-      console.log("pdpList ::>>", this.pdpList);
     })
   }
 }

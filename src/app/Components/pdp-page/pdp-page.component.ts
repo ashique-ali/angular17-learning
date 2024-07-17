@@ -9,7 +9,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PdpPageComponent implements OnInit {
   pdpData: any;
-
+  
   ngOnInit(): void {
     this.pdpData = history.state; 
     console.log("pdpData ::>>", this.pdpData);
