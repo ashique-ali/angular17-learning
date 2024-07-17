@@ -1,0 +1,12 @@
+<div class="conatiner">
+    <h2>Product List</h2>
+    <div class="row">
+        @for(item of pdpList; track item.id) {
+        <div class="pbpBlock" [routerLink]="['/product', item.id]" [state]="item">
+            <img [src]="item.image" style="width: 100%;" />
+            <h3 style="margin-top: 10px;">{{ item.name }}</h3>
+            <p style="margin-bottom: 15px;"><b>Price:</b> {{ item.caloriesPerServing | currency : 'USD' }}</p>
+        </div>
+        }
+    </div>
+</div>
