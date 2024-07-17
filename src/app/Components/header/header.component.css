@@ -1,0 +1,29 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.mainDiv {
+    position: sticky;
+    top: 0px;
+}
+
+.active {
+    color: red;
+}
+
+.navBar {
+    display: flex;
+    gap: 55px;
+    justify-content: center;
+    background: plum;
+    padding: 10px;
+}
+
+.navBar li {
+    list-style: none;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+}
