@@ -1,0 +1,47 @@
+<div class="conatiner">
+    <div class="row">
+        <div style="display: flex; justify-content: space-between; margin-top: 25px; margin-bottom: 15px; align-items: center;">
+            <h3 style="margin: 0; width: 70%;">Employee Details</h3>
+            <select style="width: 30%; padding: 10px;" (change)="changeHandler($event)">
+                <option selected>Select email</option>
+                @for(item of userEmail; track item.emal) {
+                <option [value]="item.email">{{ item.email }}</option>
+                }
+            </select>
+        </div>
+        <table>
+            <thead>
+                <tr>
+                    <th>Sr No</th>
+                    <th>Name</th>
+                    <th>Age</th>
+                    <th>Gender</th>
+                    <th>Email</th>
+                    <th>Phone</th>
+                    <th>Password</th>
+                    <th>City</th>
+                    <th>State</th>
+                    <th>Country</th>
+                    <th>Image</th>
+                </tr>
+            </thead>
+            <tbody>
+                @for(item of empData; track item.id; let i = $index) {
+                <tr>
+                    <td>{{ i+1 }}</td>
+                    <td>{{ item.firstName + " " + item.lastName }}</td>
+                    <td>{{ item.age }}</td>
+                    <td>{{ item.gender }}</td>
+                    <td>{{ item.email }}</td>
+                    <td>{{ item.phone }}</td>
+                    <td>{{ item.password }}</td>
+                    <td>{{ item.address.city }}</td>
+                    <td>{{ item.address.state }}</td>
+                    <td>{{ item.address.country }}</td>
+                    <td><img src="{{ item.image }}" style="width: 50px;"></td>
+                </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>

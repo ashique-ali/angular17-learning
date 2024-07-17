@@ -1,0 +1,67 @@
+<div class="container">
+    <div class="row">
+        <form #regData="ngForm" (ngSubmit)="register(regData)">
+            <div class="form">
+                <label>First Name</label>
+                <div class="formControls">
+                    <input type="text" placeholder="Enter name" ngModel name="firstName" #firstName="ngModel"
+                        required />
+                </div>
+                @if((firstName.dirty || firstName.touched || regData.submitted) && firstName.invalid) {
+                <span>first Name is Requried</span>
+                }
+            </div>
+            <div class="form">
+                <label>Last Name</label>
+                <div class="formControls">
+                    <input type="text" placeholder="Last name" ngModel name="lastName" #lastName="ngModel" required />
+                </div>
+                @if((lastName.dirty || lastName.touched || regData.submitted) && lastName.invalid) {
+                <span>last Name is required</span>
+                }
+            </div>
+            <div class="form">
+                <label>Enter Email</label>
+                <div class="formControls">
+                    <input type="text" placeholder="Enter email" ngModel name="email" #email="ngModel" required />
+                </div>
+                @if((email.dirty || email.touched || regData.submitted) && email.invalid) {
+                <span>Email is required</span>
+                }
+            </div>
+            <div class="form">
+                <label>Enter Mobile</label>
+                <div class="formControls">
+                    <input type="text" placeholder="Enter mobile" ngModel name="mobile" #mobile="ngModel" required />
+                </div>
+                @if((mobile.dirty || mobile.touched || regData.submitted) && mobile.invalid) {
+                <span>Mobile is required</span>
+                }
+            </div>
+            <div class="form">
+                <label>Enter password</label>
+                <div class="formControls">
+                    <input type="password" placeholder="Enter password" ngModel name="password" #password="ngModel"
+                        required />
+                </div>
+                @if((password.dirty || password.touched || regData.submitted) && password.invalid) {
+                <span>password is required</span>
+                }
+            </div>
+            <div class="form">
+                <label>Confirm password</label>
+                <div class="formControls">
+                    <input type="password" placeholder="Confirm password" ngModel name="confirmPassword"
+                        #confirmPassword="ngModel" required />
+                </div>
+                @if((confirmPassword.dirty || confirmPassword.touched || regData.submitted) && confirmPassword.invalid) {
+                <span>confirm password is required</span>
+                }
+            </div>
+            <div class="submit" style="width: 80px;">
+                <input type="submit" style="width: 100%;">
+            </div>
+        </form>
+    </div>
+</div>
+
