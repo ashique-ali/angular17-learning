@@ -1,0 +1,6 @@
+<h2 style="background-color: blueviolet; padding: 8px; text-align: center;">This is a Parent Components !!</h2>
+<div>
+    <label>Enter name</label>
+    <input type="text" placeholder="copy here" value="{{ childData }}" />
+</div>
+<app-child (childEvent)="getData($event)"></app-child>
