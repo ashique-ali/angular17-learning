@@ -1,0 +1,6 @@
+<h2 style="background-color: aqua; text-align: center; padding: 8px;">This is a Parent Component !!</h2>
+<div>
+    <label>Enter name</label>
+    <input type="text" placeholder="Enter name" #inputValue (keyup)="0" />
+</div>
+<app-test-child [parentData]="inputValue.value"></app-test-child>
